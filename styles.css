@@ -1,0 +1,41 @@
+#calc {
+    width: 400px;
+    height: 450px;
+}
+
+#text {
+    background-color: darkgrey;
+    height: 50px;
+}
+
+#keypad {
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+}
+
+#numpad {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#controls {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.key {
+    font-size: 20px;
+    background-color: #6dade0;
+    text-align: center;
+    border: 1px white solid;
+    flex-grow: 1;
+    line-height: 78px;
+}
+
+#numpad > * {
+    flex: 1 0 25%;
+    line-height: 98px;
+}

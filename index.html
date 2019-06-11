@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My First Site</title>
+
+    <!--Include style to the document-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="calc">
+        <div id="text"></div>
+        <div id="keypad">
+            <div id="numpad">
+                <div class="key" onclick="onDigitClick(7)">7</div>
+                <div class="key" onclick="onDigitClick(8)">8</div>
+                <div class="key" onclick="onDigitClick(9)">9</div>
+                <div class="key" onclick="onDigitClick(4)">4</div>
+                <div class="key" onclick="onDigitClick(5)">5</div>
+                <div class="key" onclick="onDigitClick(6)">6</div>
+                <div class="key" onclick="onDigitClick(1)">1</div>
+                <div class="key" onclick="onDigitClick(2)">2</div>
+                <div class="key" onclick="onDigitClick(3)">3</div>
+                <div class="key" onclick="onDigitClick(0)">0</div>
+                <div class="key" onclick="onDotClick()">.</div>
+                <div class="key" onclick="onResultClick()">=</div>
+            </div>
+            <div id="controls">
+                <div class="key" onclick="onDelete()">C</div>
+                <div class="key">÷</div>
+                <div class="key" onclick="onMultiplyClick()">×</div>
+                <div class="key">-</div>
+                <div class="key">+</div>
+            </div>
+        </div>
+    </div>
+    <!--Include JavaScript to the document-->
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
