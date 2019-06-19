@@ -10,7 +10,7 @@ function onDigitClick(digit) {
     }
 
     if (textBox.innerText === '0') {
-        if (digit === 0) {              
+        if (digit === 0) {
             return;
         } else {
             textBox.innerText = '';
@@ -30,7 +30,6 @@ function onDotClick() {
     textBox.innerText += '.';
 }
 
-
 function onDelete() {
     textBox.innerText = '';
     isOperationMode = false;
@@ -49,8 +48,6 @@ function onMultiplyClick() {
     textBox.innerText = '*';
 }
 
-
-
 function onDivisionClick() {
     const curText = textBox.innerText;
 
@@ -63,7 +60,6 @@ function onDivisionClick() {
     isOperationMode = true;
     textBox.innerText = '/';
 }
-
 
 function onPlusClick() {
     const curText = textBox.innerText;
@@ -78,7 +74,6 @@ function onPlusClick() {
     textBox.innerText = '+';
 }
 
-
 function onMinusClick() {
     const curText = textBox.innerText;
 
@@ -91,7 +86,6 @@ function onMinusClick() {
     isOperationMode = true;
     textBox.innerText = '-';
 }
-
 
 function onResultClick() {
     const curText = textBox.innerText;
@@ -106,8 +100,8 @@ function onResultClick() {
             operation = null;
             break;
     }
-	
-	switch (operation) {
+
+    switch (operation) {
         case '/':
             textBox.innerText = acc / +curText;
             operation = null;
@@ -119,79 +113,10 @@ function onResultClick() {
             operation = null;
             break;
     }
-		switch (operation) {
+        switch (operation) {
         case '-':
             textBox.innerText = acc - +curText;
             operation = null;
             break;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
