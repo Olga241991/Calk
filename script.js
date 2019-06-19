@@ -10,7 +10,7 @@ function onDigitClick(digit) {
     }
 
     if (textBox.innerText === '0') {
-        if (digit === 0) {
+        if (digit === 0) {              
             return;
         } else {
             textBox.innerText = '';
@@ -19,7 +19,6 @@ function onDigitClick(digit) {
 
     textBox.innerText += digit;
 }
-
 
 function onDotClick() {
     const curText = textBox.innerText;
@@ -37,7 +36,6 @@ function onDelete() {
     isOperationMode = false;
 }
 
-
 function onMultiplyClick() {
     const curText = textBox.innerText;
 
@@ -48,8 +46,52 @@ function onMultiplyClick() {
     acc = +curText;
     operation = '*';
     isOperationMode = true;
-    textBox.innerText = '×';
+    textBox.innerText = '*';
 }
+
+
+
+function onDivisionClick() {
+    const curText = textBox.innerText;
+
+    if (curText === '' || isOperationMode) {
+        return;
+    }
+
+    acc = +curText;
+    operation = '/';
+    isOperationMode = true;
+    textBox.innerText = '/';
+}
+
+
+function onPlusClick() {
+    const curText = textBox.innerText;
+
+    if (curText === '' || isOperationMode) {
+        return;
+    }
+
+    acc = +curText;
+    operation = '+';
+    isOperationMode = true;
+    textBox.innerText = '+';
+}
+
+
+function onMinusClick() {
+    const curText = textBox.innerText;
+
+    if (curText === '' || isOperationMode) {
+        return;
+    }
+
+    acc = +curText;
+    operation = '-';
+    isOperationMode = true;
+    textBox.innerText = '-';
+}
+
 
 function onResultClick() {
     const curText = textBox.innerText;
@@ -64,4 +106,92 @@ function onResultClick() {
             operation = null;
             break;
     }
+	
+	switch (operation) {
+        case '/':
+            textBox.innerText = acc / +curText;
+            operation = null;
+            break;
+    }
+		switch (operation) {
+        case '+':
+            textBox.innerText = acc + +curText;
+            operation = null;
+            break;
+    }
+		switch (operation) {
+        case '-':
+            textBox.innerText = acc - +curText;
+            operation = null;
+            break;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
