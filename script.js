@@ -34,6 +34,7 @@ function onDelete() {
     textBox.innerText = '';
     isOperationMode = false;
 }
+//
 
 function onMultiplyClick() {
     const curText = textBox.innerText;
