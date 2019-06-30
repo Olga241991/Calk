@@ -16,7 +16,6 @@ function onDigitClick(digit) {
             textBox.innerText = '';
         }
     }
-
     textBox.innerText += digit;
 }
 
@@ -34,58 +33,18 @@ function onDelete() {
     textBox.innerText = '';
     isOperationMode = false;
 }
-//
 
-function onMultiplyClick() {
+function onActClick(action) {
     const curText = textBox.innerText;
 
     if (curText === '' || isOperationMode) {
         return;
-    }
+    } 
 
     acc = +curText;
-    operation = '*';
+    operation = action;
     isOperationMode = true;
-    textBox.innerText = '*';
-}
-
-function onDivisionClick() {
-    const curText = textBox.innerText;
-
-    if (curText === '' || isOperationMode) {
-        return;
-    }
-
-    acc = +curText;
-    operation = '/';
-    isOperationMode = true;
-    textBox.innerText = '/';
-}
-
-function onPlusClick() {
-    const curText = textBox.innerText;
-
-    if (curText === '' || isOperationMode) {
-        return;
-    }
-
-    acc = +curText;
-    operation = '+';
-    isOperationMode = true;
-    textBox.innerText = '+';
-}
-
-function onMinusClick() {
-    const curText = textBox.innerText;
-
-    if (curText === '' || isOperationMode) {
-        return;
-    }
-
-    acc = +curText;
-    operation = '-';
-    isOperationMode = true;
-    textBox.innerText = '-';
+    textBox.innerText = action;
 }
 
 function onResultClick() {
@@ -98,26 +57,17 @@ function onResultClick() {
     switch (operation) {
         case '*':
             textBox.innerText = acc * +curText;
-            operation = null;
+            break;
+        case '/':
+            textBox.innerText = acc / +curText;
+            break;
+        case '+':
+            textBox.innerText = acc + +curText;
+            break;
+        case '-':
+            textBox.innerText = acc - +curText;
             break;
     }
 
-    switch (operation) {
-        case '/':
-            textBox.innerText = acc / +curText;
-            operation = null;
-            break;
-    }
-		switch (operation) {
-        case '+':
-            textBox.innerText = acc + +curText;
-            operation = null;
-            break;
-    }
-        switch (operation) {
-        case '-':
-            textBox.innerText = acc - +curText;
-            operation = null;
-            break;
-    }
+    operation = null;
 }
